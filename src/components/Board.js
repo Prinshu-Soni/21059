@@ -1,12 +1,13 @@
-import Cell from "./Cell";
-import classes from "./Board.module.css";
+import Cell from "components/Cell";
+import classes from "components/Board.module.css";
 
-const Board = ({ cells, onClick }) => (
-	<div className={classes.board}>
-		{cells.map((cell, i) => (
+const Board = ({ cells, onClick }) => {
+	const renderCells = () =>
+		cells.map((cell, i) => (
 			<Cell key={i} value={cell} onClick={() => onClick(i)} />
-		))}
-	</div>
-);
+		));
+
+	return <div className={classes.board}>{renderCells()}</div>;
+};
 
 export default Board;
