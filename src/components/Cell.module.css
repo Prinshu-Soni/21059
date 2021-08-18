@@ -1,0 +1,7 @@
+.cell {
+	border: 2px solid #4f005f;
+	font-size: 30px;
+	font-weight: 800;
+	cursor: pointer;
+	outline: none;
+}
